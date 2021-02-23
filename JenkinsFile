@@ -77,7 +77,7 @@ pipeline{
                              "files": [
                                       {
                                      "pattern": "target/*.jar",
-                                     "target": "art-doc-dev-sub/" ${env.BUILD_ID}
+                                     "target": "art-doc-dev-sub"
                                     }
                                 ]
                             }'''
