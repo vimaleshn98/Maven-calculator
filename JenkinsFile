@@ -54,7 +54,7 @@ pipeline{
             }
             post{
                 success{
-                    archiveArtifacts 'target/*-${env.BUILD_ID}.jar'
+                    archiveArtifacts 'target/*.jar'
                     echo "========Maven Packaging stage executed successfully  ${New_Version}========"
 
                 }
