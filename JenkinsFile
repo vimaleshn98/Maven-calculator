@@ -20,7 +20,7 @@ pipeline{
                 }
                 failure{
                     echo "========Maven compile stage execution failed========"
-                }
+                } 
             }
         }
         stage("build & SonarQube analysis") {
@@ -77,7 +77,7 @@ pipeline{
                              "files": [
                                       {
                                      "pattern": "target/*.jar",
-                                     "target": "art-doc-dev-sub"
+                                     "target": "art-doc-dev-sub/${env.BUILD_ID}"
                                     }
                                 ]
                             }'''
