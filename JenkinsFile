@@ -38,7 +38,7 @@ pipeline{
             post{
                 success{
                     echo "========Maven Test stage executed successfully  ${New_Version}========"
-
+                    junit 'target/surefire-reports/**/*.xml'
                 }
                 failure{
                     echo "========Maven Test stage execution failed========"
