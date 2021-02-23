@@ -12,14 +12,34 @@ public class App {
 		first = scanner.nextInt();
 		second = scanner.nextInt();
 
-		add = first + second;
-		subtract = first - second;
-		multiply = first * second;
-		devide = (float) first / second;
+		add = add(first,second);
+		subtract = sub(first, second);
+		multiply = mul(first , second);
+		devide = div( first , second);
 
 		System.out.println("Sum = " + add);
 		System.out.println("Difference = " + subtract);
 		System.out.println("Multiplication = " + multiply);
 		System.out.println("Division = " + devide);
+	}
+
+	public static float div(int first, int second) {
+		// TODO Auto-generated method stub
+		return (float)first/second;
+	}
+
+	public static int mul(int first, int second) {
+		// TODO Auto-generated method stub
+		return first*second;
+	}
+
+	public static int sub(int first, int second) {
+		// TODO Auto-generated method stub
+		return first-second;
+	}
+
+	public static int add(int first, int second) {
+		// TODO Auto-generated method stub
+		return first+second;
 	}
 }
