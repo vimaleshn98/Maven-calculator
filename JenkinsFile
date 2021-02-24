@@ -30,6 +30,11 @@ pipeline{
               }
             }
           }
+          stage("Quality gate") {
+            steps {
+                waitForQualityGate abortPipeline: true
+            }
+        }
         stage("Test"){
             steps{
                 echo "Maven Test"
@@ -100,7 +105,7 @@ pipeline{
             echo "========Running ${env.BUILD_ID} on ${env.JENKINS_URL}========"
         }
         changed{
-                    echo "========Their is change in Packaging from pervious========"
+                echo "========Their is change in Packaging from pervious========"
                 }
         success{
             echo "========pipeline executed successfully ========"
